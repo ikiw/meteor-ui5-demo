@@ -6,7 +6,7 @@ sap.ui.define(
     ],
     function(Controller, MessageToast, MeteorModel) {
         "use strict";
-        return Controller.extend("x.controller.App", {
+        return Controller.extend("demoapp.controller.App", {
             onInit: function() {
 
                 // Build and set Meteor model from meteor subscription and cursor

@@ -1,10 +1,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta charset="UTF-8">
-	<title>Hello World App</title>
-
-	<!-- src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" -->
-	<!-- src="/packages/propellerlabsio_meteor-ui5/openui5/resources/sap-ui-core.js" -->
+	<title>meteor-ui5 Demo App</title>
 
 	<script
 			id="sap-ui-bootstrap"
@@ -15,7 +12,7 @@
 			data-sap-ui-compatVersion="edge"
 			data-sap-ui-preload="async"
 			data-sap-ui-resourceroots='{
-			  "x": "/ui5app/",
+			  "demoapp": "/demoapp/",
 			  "meteor-ui5": "/packages/propellerlabsio_meteor-ui5/"
 		   	}'>
 		</script>
@@ -24,7 +21,7 @@
 	<script>
 		sap.ui.getCore().attachInit(function() {
 			sap.ui.xmlview({
-				viewName: "x.view.App"
+				viewName: "demoapp.view.App"
 			}).placeAt("content");
 		});
 	</script>
