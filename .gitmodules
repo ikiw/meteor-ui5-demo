@@ -1,0 +1,3 @@
+[submodule "packages/meteor-ui5"]
+	path = packages/meteor-ui5
+	url = https://github.com/propellerlabsio/meteor-ui5.git
