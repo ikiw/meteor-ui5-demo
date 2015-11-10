@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core">
+    <f:SimpleForm class="editableForm sapUiResponsiveMargin"
+		width="auto"
+        columnsL="1"
+        columnsM="1"
+        editable="true"
+        emptySpanL="7"
+        emptySpanM="7"
+        id="SimpleFormChange354"
+        labelSpanL="1"
+        labelSpanM="1"
+        layout="ResponsiveGridLayout"
+        maxContainerCols="2"
+        minWidth="400"
+        maxWidth="400"
+        title="Add person">
+        <f:content>
+            <Label text="Name" />
+            <Input value="{newPerson>/name}" />
+            <Label text="City" />
+            <Input value="{newPerson>/city}" />
+            <Label text="Age" />
+            <Input value="{newPerson>/age}" />
+            <Button text="Add person" press="onPressAddPerson" />
+        </f:content>
+    </f:SimpleForm>
+</core:FragmentDefinition>

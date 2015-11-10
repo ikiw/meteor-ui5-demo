@@ -1,41 +1,24 @@
-<mvc:View controllerName="demoapp.controller.App" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+<mvc:View controllerName="demoapp.controller.App"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
     <Shell>
         <App>
             <pages>
                 <Page title="meteor-ui5 Demo App">
                     <content>
-                        <Table id="idPeopleMeteorTable" inset="true" items="{
-                            			path: 'people>/',
-                            			sorter: {
-                            				path: 'Name'
-                            			}
-                            		}">
-                            <headerToolbar>
-                                <Toolbar>
-                                    <Title level="H2" text="People (MeteorModel)"/>
-                                </Toolbar>
-                            </headerToolbar>
-                            <columns>
-                                <Column width="12em">
-                                    <Text text="Name"/>
-                                </Column>
-                                <Column demandPopin="true" minScreenWidth="Tablet">
-                                    <Text text="City"/>
-                                </Column>
-                                <Column demandPopin="true" hAlign="Right" minScreenWidth="Tablet">
-                                    <Text text="Age"/>
-                                </Column>
-                            </columns>
-                            <items>
-                                <ColumnListItem>
-                                    <cells>
-                                        <Text text="{people>name}"/>
-                                        <Text text="{people>city}"/>
-                                        <Text text="{people>age}"/>
-                                    </cells>
-                                </ColumnListItem>
-                            </items>
-                        </Table>
+                        <l:Splitter id="mainSplitter"
+                            height="100%"
+                            width="100%"
+                            orientation="Vertical">
+                            <core:Fragment fragmentName="demoapp.view.PeopleTable"
+                                type="XML">
+                            </core:Fragment>
+                            <core:Fragment fragmentName="demoapp.view.NewPersonForm"
+                                type="XML">
+                            </core:Fragment>
+                        </l:Splitter>
                     </content>
                 </Page>
             </pages>

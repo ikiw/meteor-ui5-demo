@@ -1,0 +1,46 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:core="sap.ui.core">
+
+    <Table id="idPeopleMeteorTable"
+        inset="true"
+        items="{
+                   path: 'people>/',
+                   sorter: {
+                       path: 'Name'
+                   }
+               }">
+        <headerToolbar>
+            <Toolbar>
+                <Title level="H2"
+                    text="{people>/length} People" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column width="12em">
+                <Text text="Name" />
+            </Column>
+            <Column minScreenWidth="Tablet">
+                <Text text="City" />
+            </Column>
+            <Column minScreenWidth="Tablet">
+                <Text text="Age" />
+            </Column>
+            <Column>
+                <Text text="Delete" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Input value="{people>name}" />
+                    <Input value="{people>city}" />
+                    <Input value="{people>age}" />
+                    <Button app:id="{people>_id}"
+                        icon="sap-icon://delete"
+                        press="onPressDelete" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>
